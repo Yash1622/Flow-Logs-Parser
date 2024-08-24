@@ -6,31 +6,19 @@ import config
 def load_lookup_table(filename):
     ''' 
     Function to Load the lookup table from the desired input file and return it as a dictionary
-    The text file should be have data in the format dstport,protocol,tag
-    The first line is skipped as it has headers.
-    If there is data on line 0 then please comment line 18 in this code file
+    The file should be have data in the format dstport,protocol,tag
     '''
     lookup_table = {}
     try:
-        with open(filename, mode='r') as lookup_file:
+        with open(filename, mode='r') as csvfile:
            
-            file_reader = csv.reader(lookup_file)
-
-            # skipping the first line as it has headers dstport,protocol,tag
-            try:
-                next(file_reader)
-            except StopIteration:
-                return lookup_table
-
+            file_reader = csv.DictReader(csvfile)
+            
             for data in file_reader:
 
-                #skip empty lines
-                if not data:
-                    continue
-
-                dstport = data[0]
-                protocol = data[1].strip()
-                tag = data[2].strip()
+                dstport = int(data['dstport'])
+                protocol = data['protocol'].strip()
+                tag = data['tag'].strip()
                 key = (int(dstport) , protocol.lower())
 
                 lookup_table[key] = tag

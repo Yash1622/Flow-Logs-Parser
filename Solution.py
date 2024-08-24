@@ -23,7 +23,12 @@ def process_flow_logs(flow_log_file, lookup_table, protocol_map):
                 if not data.strip():
                     continue
 
-                fields = data.strip().split()
+                fields = data.split()
+
+                #skip malformed lines
+                if len(fields) < 13:
+                    continue
+                
                 dstport = int(fields[6])
                 protocol_num = int(fields[7])
                 
