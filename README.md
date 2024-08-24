@@ -2,14 +2,12 @@
 This project is to parse the file containing flow log data and store the tag counts based on a lookup table. It also generates counts for each port/protocol combination.
 
 ## Assumptions:
-- The program only supports the default AWS flow log format and version 2.
 - The flow log file must be a text file in the default AWS flow log format, version 2, as specified in the AWS VPC Fow Logs Documentation. 
 - The lookup table must be a txt file having comma seperated values with a header with the following columns:
   - dstport - an integer representing destination port 
   - protocol - a string representing the protocol 
   - tag - a string representing the tag uniquely identified by dstport and protocol together 
 - The first line of the lookup table file is assumed to be a header and is skipped
-- The log entries must be in the default log format as specified in the AWS VPC Fow Logs Documentation.
 - The mapping of protocol numbers to their corresponding protocol names is present in protocol_mapping_table.csv (the data is sourced from [Wikipedia](https://en.wikipedia.org/wiki/List_of_IP_protocol_numbers))
 
 ## File Structure:
@@ -48,10 +46,10 @@ The program requires no additional packages or libraries and is designed to run 
     ```
     python Solution.py
     ```
-## Tests Scenario
+## Test Scenarios
 - Lookup Table was empty
 - Flow logs were empty
 - Both Lookup Table and Flow Logs were empty
 - All tags are unique
-- Some tags are not unique , i.e they have multiple port and protocol pairs have the same tag
+- Some tags are not unique, i.e. they have multiple port and protocol pairs with the same tag
 
