@@ -29,7 +29,7 @@ project-root/
 The program requires no additional packages or libraries and is designed to run on a standard Python installation.  
 
 ## Usage
-1. Prepare the Lookup Table and FLow Log Files:
+- Prepare the Lookup Table and FLow Log Files:
   - Ensure that the lookup file is a txt file with comma-seperated values with the following format:
    ```
     dstport,protocol,tag
@@ -37,10 +37,10 @@ The program requires no additional packages or libraries and is designed to run 
     443,tcp,sv_P2
     110,tcp,email
    ```
-   Prepare the flow log file in the default AWS flow log format version 2.
-2. Define File Paths:
+  - Prepare the flow log file in the default AWS flow log format version 2.
+- Define File Paths:
   - Specify paths to lookup table and flow log file in the config.py file
-3. Run the program
+- Run the program
   - Execute the main script to process the flow log file. The output files will be saved into `results` directory.
     ```
     python Solution.py
