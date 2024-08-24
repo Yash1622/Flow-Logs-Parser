@@ -4,7 +4,7 @@ from utils import load_lookup_table, load_protocol_mapping_table, save_port_prot
  
 def process_flow_logs(flow_log_file, lookup_table, protocol_map):
     '''
-    Function to parse tge flow logs and count the frequency of port/protocol combination and tags.
+    Function to parse the flow logs and count the frequency of port/protocol combination and tags.
     It takes following arguments:
         flow_log_file - path to flow logs, 
         lookup_table  - the lookup table dictionary 

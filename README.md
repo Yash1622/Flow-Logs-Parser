@@ -2,7 +2,7 @@
 This project is to parse the file containing flow log data and store the tag counts based on a lookup table. It also generates counts for each port/protocol combination.
 
 ## Assumptions:
-- The flow log file must be a plain text file in the default AWS flow log format, version 2, as specified in the AWS VPC Fow Logs Documentation. 
+- The flow log file must be a plain text file in the default AWS flow log format, version 2, as specified in the AWS VPC Flow Logs Documentation. 
 - The lookup table must be a CSV file with a header with the following columns:
   - dstport - an integer representing destination port 
   - protocol - a string representing the protocol 
