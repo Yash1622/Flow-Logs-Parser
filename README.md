@@ -9,7 +9,7 @@ This project is to parse the file containing flow log data and store the tag cou
 - The log entries must be in the default log format as specified in the AWS VPC Fow Logs Documentation.
 - The mapping of protocol numbers to their corresponding protocol names is present in protocol_mapping_table.csv and the data was sourced from wikipidea
 
-# File Structure:
+## File Structure:
 ```
 project-root/
 │
@@ -28,7 +28,7 @@ project-root/
 ## Installation
 The program requires no additional packages or libraries and is designed to run on a standard Python installation.  
 
-##Usage
+## Usage
 1. Prepare the Lookup Table and FLow Log Files:
     Ensure that the lookup file is a txt file with comma-seperated values with the following format:
    ```
@@ -42,5 +42,5 @@ The program requires no additional packages or libraries and is designed to run 
     Specify paths to lookup table and flow log file in the config.py file
 4. Run the program
     Execute the main script to process the flow log file. The output files will be saved into `results` directory.
-    <pre> ```python Solution.py``` </pre> 
+    ```python Solution.py```
 
