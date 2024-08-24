@@ -17,7 +17,10 @@ def load_lookup_table(filename):
             file_reader = csv.reader(lookup_file)
 
             # skipping the first line as it has headers dstport,protocol,tag
-            next(file_reader)
+            try:
+                next(file_reader)
+            except StopIteration:
+                return lookup_table
 
             for data in file_reader:
 
