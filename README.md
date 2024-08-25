@@ -16,7 +16,7 @@ project-root/
 ├── Solution.py                 # Main script to run the program
 ├── utils.py                    # Utility functions, including load_lookup_table and other utility functions
 ├── config.py                   # Configuration file, containing file paths
-├── results/                    # Directory where output files are saved
+├── result/                     # Directory where output files are saved
   ├── tag_counts.csv              # File containing counts of matches for each tag
   └── port_protocol_counts.csv    # File containing counts of matches for each port/protocol combination 
 ├── lookup_table.txt            # Sample lookup table (provide your own)
@@ -41,7 +41,7 @@ The program requires no additional packages or libraries and is designed to run 
 - Define File Paths:
   - Specify paths to lookup table and flow log file in the config.py file
 - Run the program
-  - Execute the main script to process the flow log file. The output files will be saved into `results` directory.
+  - Execute the main script to process the flow log file. The output files will be saved into `result` directory.
     ```
     python Solution.py
     ```
